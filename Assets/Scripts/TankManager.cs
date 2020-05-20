@@ -11,13 +11,11 @@ public class TankManager : MonoBehaviour {
         availableColors.Add(1);
         availableColors.Add(2);
         availableColors.Add(3);
-
-        print("picking random entry: ");
-        print(availableColors[Random.Range(0, availableColors.Count)]);
     }
 
     public int SelectTankColor() {
-        int outInt = availableColors[Random.Range(0, availableColors.Count)];
+        print("total: " + availableColors.Count);
+        int outInt = availableColors[Random.Range(0, availableColors.Count - 1)];
         availableColors.Remove(outInt);
         return outInt;
     }

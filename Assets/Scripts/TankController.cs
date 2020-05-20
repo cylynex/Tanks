@@ -28,6 +28,7 @@ public class TankController : MonoBehaviour {
     [Header("Fire Control")]
     [SerializeField] Transform primaryFirePoint;
     [SerializeField] GameObject primaryWeapon;
+    [SerializeField] float primaryFireForce = 100f;
 
     // Singletons
     GameObject gameController;
@@ -173,6 +174,9 @@ public class TankController : MonoBehaviour {
     void FireControl() {
 
         print("SHOOT BITCH DEMOCRACY IS AT STAKE!!!");
+        GameObject rocket = Instantiate(primaryWeapon, primaryFirePoint.position, Quaternion.identity);
+        //rocket.GetComponent<Rigidbody>().AddForce(transform.forward * 10 * primaryFireForce);
+        rocket.GetComponent<Rigidbody>().AddForce(cannon.transform.forward * 10 * primaryFireForce);
     }
 
 }
