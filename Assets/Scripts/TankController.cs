@@ -10,6 +10,7 @@ public class TankController : MonoBehaviour {
     bool moving = false;
     float turnSpeed = 40f;
     float turretSpeed = 13f;
+    bool moveDirection;
 
     private void Update() {
         GetInput();
@@ -29,15 +30,15 @@ public class TankController : MonoBehaviour {
             print("neutral");
         }
 
-        print("V: " + Input.GetAxis("P1_Vertical"));
-        print("Vert: " + Input.GetAxis("Vertical"));
-        if (Input.GetAxis("P1_Vertical") > 0.1f) {
+        if (Input.GetAxis("P1_Vertical") > 0.3f) {
             print("UP/DOWN");
             moving = true;
+            moveDirection = true;
             MoveForward();
-        } else if (Input.GetAxis("P1_Vertical") < -0.1f) {
+        } else if (Input.GetAxis("P1_Vertical") < -0.3f) {
             moving = true;
             MoveBackward();
+            moveDirection = false;
         } else {
             moving = false;
         }
@@ -75,7 +76,11 @@ public class TankController : MonoBehaviour {
         if (moving) {
             print("spin wheels");
             for (int i = 0; i < wheels.Length; i++) {
-                wheels[i].transform.Rotate(new Vector3(10, 0, 0) * 10 * Time.deltaTime);
+                if (moveDirection) {
+                    wheels[i].transform.Rotate(new Vector3(10, 0, 0) * 10 * Time.deltaTime);
+                } else {
+                    wheels[i].transform.Rotate(-new Vector3(10, 0, 0) * 10 * Time.deltaTime);
+                }
             }
         }
     }
