@@ -7,6 +7,7 @@ public class TankController : MonoBehaviour {
 
     [Header("Turret")]
     [SerializeField] GameObject turret;
+    [SerializeField] GameObject cannon;
     [SerializeField] float turretSpeed;
     Vector2 turretMovement;
 
@@ -19,6 +20,22 @@ public class TankController : MonoBehaviour {
     [SerializeField] float turnSpeed = 1f;
     bool moveDirection;
     bool moving;
+    int tankColorID;
+    [SerializeField] Material[] tankMaterials;
+
+    GameObject gameController;
+    TankManager tankManager;
+
+    private void Awake() {
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+        tankManager = gameController.GetComponent<TankManager>();
+
+        tankColorID = tankManager.SelectTankColor();
+        print("this tank will use color code: " + tankColorID);
+        GetComponent<MeshRenderer>().material = tankMaterials[tankColorID];
+        turret.GetComponent<MeshRenderer>().material = tankMaterials[tankColorID];
+        cannon.GetComponent<MeshRenderer>().material = tankMaterials[tankColorID];
+    }
 
     private void FixedUpdate() {
         Move();

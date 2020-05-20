@@ -175,12 +175,12 @@ GameObject:
   - component: {fileID: 1114008876}
   - component: {fileID: 1114008877}
   m_Layer: 0
-  m_Name: BlueTank
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6481181620071604219
 Transform:
   m_ObjectHideFlags: 0
@@ -225,9 +225,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4577ee2046668dc4faae41439ead563c, type: 2}
-  - {fileID: 2100000, guid: 36797ffef13d2934b9df4b1eee1d60ad, type: 2}
-  - {fileID: 2100000, guid: 4bd122cb58a5d8645afd8bf406f31e3f, type: 2}
-  - {fileID: 2100000, guid: 546738ce5c5f3484bb590ed3d3f696ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -309,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 5917744142165625691}
+  cannon: {fileID: 6373531252607381348}
   turretSpeed: 20
   wheels:
   - {fileID: 4882076419663147986}
@@ -317,6 +315,11 @@ MonoBehaviour:
   - {fileID: 4056502704155929802}
   moveSpeed: 1
   turnSpeed: 10
+  tankMaterials:
+  - {fileID: 2100000, guid: 4577ee2046668dc4faae41439ead563c, type: 2}
+  - {fileID: 2100000, guid: 36797ffef13d2934b9df4b1eee1d60ad, type: 2}
+  - {fileID: 2100000, guid: 4bd122cb58a5d8645afd8bf406f31e3f, type: 2}
+  - {fileID: 2100000, guid: 546738ce5c5f3484bb590ed3d3f696ee, type: 2}
 --- !u!114 &1114008877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,9 +813,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4577ee2046668dc4faae41439ead563c, type: 2}
-  - {fileID: 2100000, guid: 36797ffef13d2934b9df4b1eee1d60ad, type: 2}
-  - {fileID: 2100000, guid: 4bd122cb58a5d8645afd8bf406f31e3f, type: 2}
-  - {fileID: 2100000, guid: 546738ce5c5f3484bb590ed3d3f696ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -892,9 +892,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4577ee2046668dc4faae41439ead563c, type: 2}
-  - {fileID: 2100000, guid: 36797ffef13d2934b9df4b1eee1d60ad, type: 2}
-  - {fileID: 2100000, guid: 4bd122cb58a5d8645afd8bf406f31e3f, type: 2}
-  - {fileID: 2100000, guid: 546738ce5c5f3484bb590ed3d3f696ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

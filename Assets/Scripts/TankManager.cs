@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TankManager : MonoBehaviour {
 
-    public bool[] selectedColors;
     List<int> availableColors = new List<int>();
 
     private void Start() {
@@ -15,8 +14,12 @@ public class TankManager : MonoBehaviour {
 
         print("picking random entry: ");
         print(availableColors[Random.Range(0, availableColors.Count)]);
-        
+    }
 
+    public int SelectTankColor() {
+        int outInt = availableColors[Random.Range(0, availableColors.Count)];
+        availableColors.Remove(outInt);
+        return outInt;
     }
 
 }
