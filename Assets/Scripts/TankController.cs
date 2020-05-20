@@ -20,9 +20,16 @@ public class TankController : MonoBehaviour {
     [SerializeField] float turnSpeed = 1f;
     bool moveDirection;
     bool moving;
+
+    [Header("Colors")]
     int tankColorID;
     [SerializeField] Material[] tankMaterials;
 
+    [Header("Fire Control")]
+    [SerializeField] Transform primaryFirePoint;
+    [SerializeField] GameObject primaryWeapon;
+
+    // Singletons
     GameObject gameController;
     TankManager tankManager;
 
@@ -53,6 +60,9 @@ public class TankController : MonoBehaviour {
         turretMovement = value.Get<Vector2>();;
     }
 
+    void OnFireMain() {
+        FireControl();
+    }
 
 
     /**** CONTROL METHODS ****/
@@ -158,6 +168,11 @@ public class TankController : MonoBehaviour {
                 turret.transform.Rotate(turretHeight);
             }
         }
+    }
+
+    void FireControl() {
+
+        print("SHOOT BITCH DEMOCRACY IS AT STAKE!!!");
     }
 
 }

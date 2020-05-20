@@ -20,6 +20,14 @@
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "FireMain",
+                    "type": "Button",
+                    "id": "5bbb8def-8f5f-4b4c-924f-354aac20c43c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -42,6 +50,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveTurret",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65b76e3c-e669-45d9-9a15-17eb9845e235",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireMain",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
