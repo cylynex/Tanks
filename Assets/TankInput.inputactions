@@ -1,0 +1,52 @@
+{
+    "name": "TankInput",
+    "maps": [
+        {
+            "name": "Tank",
+            "id": "ab98fd2c-2596-4fec-8e95-be211a4901ad",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "104c8a72-017f-4a1a-9b4f-3f953f8217a2",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveTurret",
+                    "type": "Value",
+                    "id": "2458a321-90ef-423b-b038-ff42d2b28a7b",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fef261e2-657c-44b1-9da2-34ec2b11cf6d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d98b517-6597-4b0e-af7b-152af52ec05c",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveTurret",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

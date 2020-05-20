@@ -337,7 +337,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -394,13 +394,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.6898738, y: 0.52889097, z: -0.13645996, w: 0.47510755}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 53.118004, y: 148.42201, z: 88.95901}
 --- !u!1 &742089975
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,8 +667,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07248845, y: -0.92428136, z: 0.22178362, w: 0.30209523}
-  m_LocalPosition: {x: 6.1113186, y: 5.171359, z: 7.55608}
+  m_LocalRotation: {x: -0.080069005, y: -0.9109529, z: 0.21137272, w: -0.34507295}
+  m_LocalPosition: {x: -8.586256, y: 7.2064896, z: 8.408945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -735,6 +735,81 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1 &1998882050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998882052}
+  - component: {fileID: 1998882051}
+  m_Layer: 0
+  m_Name: PlayerInputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1998882051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998882050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: 2
+  m_AllowJoining: 1
+  m_JoinBehavior: 0
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 4658237373283821642, guid: afc838391acbdd54c9a7650dda249f9d,
+    type: 3}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!4 &1998882052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998882050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8917732, y: 1.3098998, z: -0.5666666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &259134576759822301
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -965,14 +1040,13 @@ GameObject:
   - component: {fileID: 6619974028628402666}
   - component: {fileID: 3594579223612869235}
   - component: {fileID: 3594579223612869234}
-  - component: {fileID: 3594579223612869236}
   m_Layer: 0
   m_Name: RedTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &3594579223612869234
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1003,24 +1077,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3594579223612869236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594579223612869233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1295dbab3959c794c8a252cacb53ba9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheels:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  turret: {fileID: 2551267225501198688}
 --- !u!1 &3641017725379351017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,27 +1199,12 @@ PrefabInstance:
     - target: {fileID: 4658237373283821642, guid: afc838391acbdd54c9a7650dda249f9d,
         type: 3}
       propertyPath: m_Name
-      value: BlueTank
+      value: Tank
       objectReference: {fileID: 0}
-    - target: {fileID: 5811330606390422874, guid: afc838391acbdd54c9a7650dda249f9d,
+    - target: {fileID: 4658237373283821642, guid: afc838391acbdd54c9a7650dda249f9d,
         type: 3}
-      propertyPath: m_Name
-      value: RR Wheel Collider
-      objectReference: {fileID: 0}
-    - target: {fileID: 5811330606740154908, guid: afc838391acbdd54c9a7650dda249f9d,
-        type: 3}
-      propertyPath: m_Name
-      value: FR Wheel Collider
-      objectReference: {fileID: 0}
-    - target: {fileID: 5811330607633034021, guid: afc838391acbdd54c9a7650dda249f9d,
-        type: 3}
-      propertyPath: m_Name
-      value: FL Wheel Collider
-      objectReference: {fileID: 0}
-    - target: {fileID: 5811330608022839890, guid: afc838391acbdd54c9a7650dda249f9d,
-        type: 3}
-      propertyPath: m_Name
-      value: RL Wheel Collider
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6481181620071604219, guid: afc838391acbdd54c9a7650dda249f9d,
         type: 3}
@@ -1203,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 6481181620071604219, guid: afc838391acbdd54c9a7650dda249f9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6481181620071604219, guid: afc838391acbdd54c9a7650dda249f9d,
         type: 3}
