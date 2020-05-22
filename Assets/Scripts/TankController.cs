@@ -28,7 +28,9 @@ public class TankController : MonoBehaviour {
     [Header("Fire Control")]
     [SerializeField] Transform primaryFirePoint;
     [SerializeField] GameObject primaryWeapon;
-    [SerializeField] float primaryFireForce = 100f;
+    [SerializeField] float primaryFireForce = 15f;
+    [SerializeField] float fireRate = 5f;
+    [SerializeField] float fireTimer;
 
     // Singletons
     GameObject gameController;
@@ -49,6 +51,7 @@ public class TankController : MonoBehaviour {
         Move();
         TurnWheels();
         AimTurret();
+        FireTimeCalc();
     }
 
     /**** MAIN MESSAGES ****/
@@ -67,6 +70,14 @@ public class TankController : MonoBehaviour {
 
 
     /**** CONTROL METHODS ****/
+
+    void FireTimeCalc() {
+        if (fireTimer > 0) {
+            fireTimer -= Time.deltaTime;
+        } else if (fireTimer < 0) {
+            fireTimer = 0;
+        }
+    }
 
     void Move() {
         //Vector3 fullMovement = new Vector3(movement.x, 0, 0) * moveSpeed * Time.deltaTime;
@@ -157,6 +168,7 @@ public class TankController : MonoBehaviour {
             turret.transform.Rotate(turretMotion);
         }
 
+        /*
         if (turretMovement.y > 0.3f) {
             //print("AIM DOWN SON");
         } else if (turretMovement.y < -0.3f) {
@@ -169,14 +181,20 @@ public class TankController : MonoBehaviour {
                 turret.transform.Rotate(turretHeight);
             }
         }
+        */
     }
 
     void FireControl() {
+        if (fireTimer == 0) {
+            print("SHOOT BITCH DEMOCRACY IS AT STAKE!!!");
+            GameObject rocket = Instantiate(primaryWeapon, primaryFirePoint.position, primaryFirePoint.rotation);
+            rocket.GetComponent<Rigidbody>().velocity = primaryFireForce * primaryFirePoint.forward;
+            fireTimer = fireRate;
 
-        print("SHOOT BITCH DEMOCRACY IS AT STAKE!!!");
-        GameObject rocket = Instantiate(primaryWeapon, primaryFirePoint.position, Quaternion.identity);
-        //rocket.GetComponent<Rigidbody>().AddForce(transform.forward * 10 * primaryFireForce);
-        rocket.GetComponent<Rigidbody>().AddForce(cannon.transform.forward * 10 * primaryFireForce);
+            // Kickback
+            //GetComponent<Rigidbody>().AddForce(new Vector3(-6000, 0, 0), ForceMode.Acceleration);
+            
+        }
     }
 
 }
